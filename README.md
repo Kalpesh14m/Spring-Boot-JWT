@@ -104,3 +104,9 @@ If you want to play with JWT and put these concepts into practice, you can use [
 ![](https://user-images.githubusercontent.com/25608527/82703118-f8b42280-9c90-11ea-8408-d8ad9f0f007a.png)
 
 
+## How JWT Works?
+![](https://user-images.githubusercontent.com/25608527/82704530-5cd7e600-9c93-11ea-94c4-0ecd37972e12.png)
+
+
+## More about Learning JAVA follow [Instagram page](https://www.instagram.com/learning_with_devil/) 
+###### [Instagram](https://www.instagram.com/devil_bunnyy/)
