@@ -61,7 +61,7 @@ There are three types of claims:
   - Public claims
   - Private claims
 
-    1. **Registered claims:** These are a set of predefined claims which are not mandatory but recommended, to provide a set of useful, interoperable claims. _Some of them are:_ **`iss (issuer), exp (expiration time), sub (subject), aud (audience), and others`**.
+   1. **Registered claims:** These are a set of predefined claims which are not mandatory but recommended, to provide a set of useful, interoperable claims. _Some of them are:_ **`iss (issuer), exp (expiration time), sub (subject), aud (audience), and others`**.
    
    **Notice:** that the _claim names are only three characters long as JWT is meant to be compact_.
 
@@ -97,4 +97,6 @@ The signature is used to verify the message wasn't changed along the way, and, i
 
 The following shows a JWT that has the previous header and payload encoded, and it is signed with a secret. Encoded JWT
 
-If you want to play with JWT and put these concepts into practice, you can use [www.jwt.io] Debugger to decode, verify, and generate JWTs.
+If you want to play with JWT and put these concepts into practice, you can use [JWT Debugger](www.jwt.io) to decode, verify, and generate JWTs.
+
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
