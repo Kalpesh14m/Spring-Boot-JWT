@@ -99,4 +99,4 @@ The following shows a JWT that has the previous header and payload encoded, and 
 
 If you want to play with JWT and put these concepts into practice, you can use [JWT Debugger](www.jwt.io) to decode, verify, and generate JWTs.
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![](https://user-images.githubusercontent.com/25608527/82702553-dcfc4c80-9c8f-11ea-81d6-1d5d1fcb7bd6.png)
