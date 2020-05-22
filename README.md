@@ -1,6 +1,6 @@
-# **About Project (_bunny_)**
+# **About Project (_Bunny_:man_technologist:)**
 
-## Spring Security using JWT (***Json Web Token***) in Spring Boot
+## Spring Security using JWT (***Json Web Token***:closed_lock_with_key:) in Spring Boot
 
 ## This Project uses JWT to secure the REST endpoints.
 
