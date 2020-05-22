@@ -61,42 +61,40 @@ There are three types of claims:
   - Public claims
   - Private claims
 
-    **1.Registered claims:** These are a set of predefined claims which are not mandatory but recommended, to provide a set of useful, interoperable claims. Some of them are: **`iss (issuer), exp (expiration time), sub (subject), aud (audience), and others`**.
+    1. **Registered claims:** These are a set of predefined claims which are not mandatory but recommended, to provide a set of useful, interoperable claims. _Some of them are:_ **`iss (issuer), exp (expiration time), sub (subject), aud (audience), and others`**.
+   
+   **Notice:** that the _claim names are only three characters long as JWT is meant to be compact_.
 
-        Notice that the claim names are only three characters long as JWT is meant to be compact.
+   2. **Public claims:** These can be defined at will by those using JWTs. But to avoid collisions they should be defined in the **`IANA JSON Web Token Registry or be defined as a URI that contains a collision resistant namespace`**.
 
-    Public claims: These can be defined at will by those using JWTs. But to avoid collisions they should be defined in the IANA JSON Web Token Registry or be defined as a URI that contains a collision resistant namespace.
+   3. **Private claims:** These are the custom claims created to share information between parties that agree on using them and are neither registered or public claims.
 
-    Private claims: These are the custom claims created to share information between parties that agree on using them and are neither registered or public claims.
-
-An example payload could be:
-
+***An example payload could be:***
+```
 {
   "sub": "1234567890",
-  "name": "John Doe",
+  "name": "Kalpesh Mahajan",
   "admin": true
 }
+```
+The payload is then `Base64Url encoded to form the second part of the JSON Web Token`.
 
-The payload is then Base64Url encoded to form the second part of the JSON Web Token.
+   Do note that ***for signed tokens this information, though protected against tampering, is readable by anyone***. **Do not put secret information in the payload or header elements of a JWT unless it is encrypted**.
 
-    Do note that for signed tokens this information, though protected against tampering, is readable by anyone. Do not put secret information in the payload or header elements of a JWT unless it is encrypted.
 
-Signature
+**Signature:** To create the signature part you have to take the `encoded header`, the `encoded payload`, `a secret`, `the algorithm specified in the header`, and `sign that`.
 
-To create the signature part you have to take the encoded header, the encoded payload, a secret, the algorithm specified in the header, and sign that.
-
-For example if you want to use the HMAC SHA256 algorithm, the signature will be created in the following way:
-
-HMACSHA256(
+***For example if you want to use the `HMAC SHA256 algorithm`, the signature will be created in the following way:***
+```
+  HMACSHA256(
   base64UrlEncode(header) + "." +
   base64UrlEncode(payload),
   secret)
-
+```
 The signature is used to verify the message wasn't changed along the way, and, in the case of tokens signed with a private key, it can also verify that the sender of the JWT is who it says it is.
-Putting all together
 
-The output is three Base64-URL strings separated by dots that can be easily passed in HTML and HTTP environments, while being more compact when compared to XML-based standards such as SAML.
+**Putting all together:** The output is **`three Base64-URL strings separated by dots`** that can be easily passed in HTML and HTTP environments, while being more compact when compared to XML-based standards such as SAML.
 
 The following shows a JWT that has the previous header and payload encoded, and it is signed with a secret. Encoded JWT
 
-If you want to play with JWT and put these concepts into practice, you can use jwt.io Debugger to decode, verify, and generate JWTs.
+If you want to play with JWT and put these concepts into practice, you can use [www.jwt.io] Debugger to decode, verify, and generate JWTs.
