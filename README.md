@@ -95,8 +95,12 @@ The signature is used to verify the message wasn't changed along the way, and, i
 
 **Putting all together:** The output is **`three Base64-URL strings separated by dots`** that can be easily passed in HTML and HTTP environments, while being more compact when compared to XML-based standards such as SAML.
 
-The following shows a JWT that has the previous header and payload encoded, and it is signed with a secret. Encoded JWT
+The following shows a JWT that has the previous header and payload encoded, and it is signed with a secret.
+
+![](https://user-images.githubusercontent.com/25608527/82702553-dcfc4c80-9c8f-11ea-81d6-1d5d1fcb7bd6.png)
 
 If you want to play with JWT and put these concepts into practice, you can use [JWT Debugger](www.jwt.io) to decode, verify, and generate JWTs.
 
-![](https://user-images.githubusercontent.com/25608527/82702553-dcfc4c80-9c8f-11ea-81d6-1d5d1fcb7bd6.png)
+![](https://user-images.githubusercontent.com/25608527/82702959-a115b700-9c90-11ea-8acf-e8f8f2312e93.png)
+
+
